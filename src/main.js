@@ -1,3 +1,3 @@
-import {getIncreasingArray} from "./mild/mild_1.js";
+import {maxAndMin} from "./mild/mild_1.js";
 
-console.log(getIncreasingArray(0, 10));
+console.log(maxAndMin([0, 10, 20, 30, 15]));
