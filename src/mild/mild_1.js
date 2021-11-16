@@ -24,7 +24,10 @@ export function sumToString(a, b) {
  *
  */
 export function getIncreasingArray(startNumber, endNumber) {
-
+    let array = []
+    for(i = startNumber; i < endNumber; i++) {
+        array[array.length] = i
+    }
 }
 
 /**
