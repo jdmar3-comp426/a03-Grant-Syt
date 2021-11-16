@@ -54,5 +54,13 @@ export function maxAndMin(numbers) {
  *
  */
 export function countArray(array) {
-
+    var dict = {};
+    for(var a of array) {
+        if (a in dict) {
+            dict[a] = dict[a] + 1;
+        } else {
+            dict[a] = 1;
+        }
+    }
+    return dict;
 }
