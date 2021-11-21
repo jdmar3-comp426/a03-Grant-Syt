@@ -9,3 +9,7 @@ console.log(countArray([3, 6, 3, 2, 2, 3, 'some', 'hello', 'some', [1, 2]]));
 import {identifyVariable} from "./mild/mild_2.js";
 
 console.log(identifyVariable('hello'));
+
+import {identifyArray} from "./mild/mild_2.js";
+
+console.log(identifyArray(['some', 3, [3, 4], false]));
