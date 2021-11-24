@@ -77,7 +77,7 @@ export function removeKeyNonDestructive(object, key) {
 
    // Method 2
    var new_obj = {};
-   const {password, ...keys} = object;
+   const {key, ...keys} = object;
    new_obj = keys;
    return new_obj;
 }
