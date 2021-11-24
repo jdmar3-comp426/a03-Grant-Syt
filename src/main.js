@@ -25,14 +25,26 @@
 // removeKey(obj, 'password');
 // console.log(obj);
 
-import {removeKeyNonDestructive} from "./mild/mild_2.js";
+// import {removeKeyNonDestructive} from "./mild/mild_2.js";
 
-var obj = {
-    name: 'Mr. Boss',
-    title: 'boss',
-    age: 33,
-    password: 'pass123'
+// var obj = {
+//     name: 'Mr. Boss',
+//     title: 'boss',
+//     age: 33,
+//     password: 'pass123'
+// };
+//  var new_obj = removeKeyNonDestructive(obj, 'name');
+//  console.log(obj);
+//  console.log(new_obj);
+
+import {removeKeys} from "./mild/mild_2.js";
+
+let obj = {
+name: 'Mr. Boss',
+title: 'boss',
+age: 33,
+password: 'pass123'
 };
- var new_obj = removeKeyNonDestructive(obj, 'name');
- console.log(obj);
- console.log(new_obj);
+let new_obj = removeKeys(obj, ['password', 'age']);
+console.log(obj);
+console.log(new_obj);
