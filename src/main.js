@@ -33,6 +33,6 @@ var obj = {
     age: 33,
     password: 'pass123'
 };
- var new_obj = removeKeyNonDestructive(obj, 'age');
+ var new_obj = removeKeyNonDestructive(obj, 'name');
  console.log(obj);
  console.log(new_obj);
