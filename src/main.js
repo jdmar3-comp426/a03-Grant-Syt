@@ -13,3 +13,14 @@ console.log(identifyVariable('hello'));
 import {identifyArray} from "./mild/mild_2.js";
 
 console.log(identifyArray(['some', 3, [3, 4], false]));
+
+import {removeKey} from "./mild/mild_2.js";
+
+let obj = {
+    name: 'Mr. Boss',
+    title: 'boss',
+    age: 33,
+    password: 'pass123'
+};
+removeKey(obj, 'password');
+console.log(obj);
