@@ -70,18 +70,18 @@ export function removeKey(object, key) {
  */
 export function removeKeyNonDestructive(object, key) {
    //// Method 1
-   var new_obj = {};
-   Object.assign(new_obj, object);
-   delete new_obj[key];
-   return new_obj;
+   // var new_obj = {};
+   // Object.assign(new_obj, object);
+   // delete new_obj[key];
+   // return new_obj;
 
    //// Method 2
-   // var new_obj = {};
-   // var rest;
-   // var _; // ignore
-   // ({[key]: _, ...rest} = object);
-   // new_obj = rest;
-   // return new_obj;
+   var new_obj = {};
+   var rest;
+   var _; // ignore
+   ({[key]: _, ...rest} = object);
+   new_obj = rest;
+   return new_obj;
 }
 
 /**
