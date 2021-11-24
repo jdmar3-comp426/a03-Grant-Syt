@@ -37,14 +37,18 @@
 //  console.log(obj);
 //  console.log(new_obj);
 
-import {removeKeys} from "./mild/mild_2.js";
+// import {removeKeys} from "./mild/mild_2.js";
 
-let obj = {
-name: 'Mr. Boss',
-title: 'boss',
-age: 33,
-password: 'pass123'
-};
-let new_obj = removeKeys(obj, ['password', 'age']);
-console.log(obj);
-console.log(new_obj);
+// let obj = {
+// name: 'Mr. Boss',
+// title: 'boss',
+// age: 33,
+// password: 'pass123'
+// };
+// let new_obj = removeKeys(obj, ['password', 'age']);
+// console.log(obj);
+// console.log(new_obj);
+
+import {getSum} from "./medium/medium_1.js";
+
+console.log(getSum([1,2,3,4,5,6]));
