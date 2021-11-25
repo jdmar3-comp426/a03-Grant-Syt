@@ -53,7 +53,21 @@
 
 // console.log(getSum([1,2,3,4,5,6]));
 
-import {getMedian} from "./medium/medium_1.js";
+// import {getMedian} from "./medium/medium_1.js";
 
-let array = [3,2,5,6,2,7,4,2,7,5];
-console.log(getMedian(array)); // 4.5
+// let array = [3,2,5,6,2,7,4,2,7,5];
+// console.log(getMedian(array)); // 4.5
+
+import {getStatistics} from "./medium/medium_1.js";
+
+console.log(getStatistics([3,2,4,5,5,5,2,6,7]));
+// {
+//   length: 9,
+//   sum: 39,
+//   mean: 4.333333333333333,
+//   median: 5,
+//   min: 2,
+//   max: 7,
+//   variance: 2.6666666666666665,
+//   standard_deviation: 1.632993161855452
+// }
