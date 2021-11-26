@@ -184,20 +184,20 @@ function getAvgMpgByYearAndHybrid(data) {
         // either way, add car
         if (car.hybrid) {
             var car_arr = result[car.year].hybrid.cars;
-            car_arr[car_arr.length] = car;
+            car_arr.push(car);
         } else {
             var car_arr = result[car.year].notHybrid.cars;
-            car_arr[car_arr.length] = car;
+            car_arr.push(car);
         }
     }
     // call avg functions on everything
-    for (var year in result){
-        result[year].hybrid.city = avgCityMpg(result[year].hybrid.cars);
-        result[year].hybrid.highway = avgHwyMpg(result[year].hybrid.cars);
-        result[year].notHybrid.city = avgCityMpg(result[year].notHybrid.cars);
-        result[year].notHybrid.highway = avgHwyMpg(result[year].notHybrid.cars);
-        delete result[year].hybrid.cars;
-        delete result[year].notHybrid.cars;
+    for (var year of Object.values(result)){
+        year.hybrid.city = avgCityMpg(year.hybrid.cars);
+        year.hybrid.highway = avgHwyMpg(year.hybrid.cars);
+        year.notHybrid.city = avgCityMpg(year.notHybrid.cars);
+        year.notHybrid.highway = avgHwyMpg(year.notHybrid.cars);
+        delete year.hybrid.cars;
+        delete year.notHybrid.cars;
     }
     return result;
 }

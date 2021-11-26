@@ -18,7 +18,15 @@ queries.
  *
  */
 export function searchHighPower(car_data, minHorsepower, minTorque) {
-
+    var car_arr = [];
+    // select cars
+    for (var car of car_data) {
+        if (car.horsepower >= minHorsepower && 
+            car.torque >= minTorque) {
+                car_arr.push([car]);
+        }
+    }
+    // sort cars
 }
 
 
