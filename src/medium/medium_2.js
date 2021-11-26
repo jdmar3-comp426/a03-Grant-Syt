@@ -126,6 +126,78 @@ export const allCarStats = {
  * }
  */
 export const moreStats = {
-    makerHybrids: undefined,
-    avgMpgByYearAndHybrid: undefined
+    makerHybrids: getMakerHybrids(mpg_data),
+    avgMpgByYearAndHybrid: getAvgMpgByYearAndHybrid(mpg_data)
 };
+
+function getMakerHybrids(data){
+    var makerHybrids = [];
+    for (var car of data) {
+        if (car.hybrid) {
+            // check for existing make
+            var makeFound = false;
+            for (var entry of makerHybrids){
+                if (entry.make == car.make) {
+                    // make already added
+                    makeFound = true;
+                    // check for existing id
+                    var idFound = false;
+                    for (var id of entry.hybrids) {
+                        if (id == car.id) {
+                            // id already added
+                            idFound = true;
+                            break; // id already found
+                        }
+                    }
+                    // add id
+                    if (!idFound){
+                        entry.hybrids[entry.hybrids.length] = car.id;
+                    }
+                    break; // make already found
+                }
+            }
+            // add make
+            if (!makeFound) {
+                makerHybrids[makerHybrids.length] = {'make': car.make, 'hybrids': [car.id]};
+            }
+        }
+    }
+    return makerHybrids;
+}
+
+function getAvgMpgByYearAndHybrid(data) {
+    var result = {};
+    // build arrays of cars
+    for (var car of data) {
+        // year not added
+        if (!(car.year in result)) {
+            // add year entry
+            result[car.year] = {
+                hybrid: {
+                    cars: []
+                },
+                notHybrid: {
+                    cars: []
+                }
+            };
+        }
+        // either way, add car
+        if (car.hybrid) {
+            var car_arr = result[car.year].hybrid.cars;
+            car_arr[car_arr.length] = car;
+        } else {
+            var car_arr = result[car.year].notHybrid.cars;
+            car_arr[car_arr.length] = car;
+        }
+    }
+    // call avg functions on everything
+    for (var year in result){
+        result[year].hybrid.city = avgCityMpg(result[year].hybrid.cars);
+        result[year].hybrid.highway = avgHwyMpg(result[year].hybrid.cars);
+        result[year].notHybrid.city = avgCityMpg(result[year].notHybrid.cars);
+        result[year].notHybrid.highway = avgHwyMpg(result[year].notHybrid.cars);
+        delete result[year].hybrid.cars;
+        delete result[year].notHybrid.cars;
+    }
+    return result;
+}

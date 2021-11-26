@@ -72,7 +72,17 @@
 //   standard_deviation: 1.632993161855452
 // }
 
-import {allCarStats} from "./medium/medium_2.js";
+// import {allCarStats} from "./medium/medium_2.js";
 
-console.log(allCarStats);
+// console.log(allCarStats);
 
+import {moreStats} from "./medium/medium_2.js";
+
+console.log(moreStats);
+// for (var entry of moreStats.makerHybrids) {
+//     console.log(entry.hybrids);
+// }
+for (var year in moreStats.avgMpgByYearAndHybrid) {
+    console.log(year);
+    console.log(moreStats.avgMpgByYearAndHybrid[year]);
+}
