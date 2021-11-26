@@ -58,9 +58,9 @@
 // let array = [3,2,5,6,2,7,4,2,7,5];
 // console.log(getMedian(array)); // 4.5
 
-import {getStatistics} from "./medium/medium_1.js";
+// import {getStatistics} from "./medium/medium_1.js";
 
-console.log(getStatistics([3,2,4,5,5,5,2,6,7]));
+// console.log(getStatistics([3,2,4,5,5,5,2,6,7]));
 // {
 //   length: 9,
 //   sum: 39,
@@ -71,3 +71,8 @@ console.log(getStatistics([3,2,4,5,5,5,2,6,7]));
 //   variance: 2.6666666666666665,
 //   standard_deviation: 1.632993161855452
 // }
+
+import {allCarStats} from "./medium/medium_2.js";
+
+console.log(allCarStats);
+
