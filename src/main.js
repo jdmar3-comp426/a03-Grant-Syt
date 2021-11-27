@@ -93,6 +93,10 @@ import mpg_data from "./medium/data/mpg_data.js";
 
 // console.log(searchHighPower(mpg_data, 630, 738));
 
-import {searchName} from "./medium/medium_3.js";
+// import {searchName} from "./medium/medium_3.js";
 
-console.log(searchName(mpg_data, "amg"));
+// console.log(searchName(mpg_data, "amg"));
+
+import {searchByYear} from "./medium/medium_3.js";
+
+console.log(searchByYear(mpg_data, [2008, 2009]));

@@ -92,5 +92,13 @@ export function searchName(car_data, searchTerm) {
  * @returns {[]} an array of car objects
  */
 export function searchByYear(car_data, years) {
-
+    var car_arr = [];
+    // select cars
+    for (var car of car_data) {
+        if (years.includes(car.year)) {
+                car_arr.push(car);
+        }
+    }
+    // sort cars
+    return car_arr.sort((a,b) => b.year - a.year);
 }
