@@ -28,7 +28,7 @@ export const repeat = (fn, n, ...params) => {
  *   10 times.
  */
 export const repeatDemo = () => {
-
+    repeat((str) => console.log(str), 10, "Hello, world!");
 };
 
 

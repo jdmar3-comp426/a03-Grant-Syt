@@ -101,10 +101,14 @@
 
 // console.log(searchByYear(mpg_data, [2008, 2009]));
 
-import {repeat} from "./spicy/spicy_9.js";
+// import {repeat} from "./spicy/spicy_9.js";
 
-function hi(str) {
-    return `hi ${str}`;
-}
+// function hi(str) {
+//     return `hi ${str}`;
+// }
 
-console.log(repeat(hi, 3, ["fred"]));
+// console.log(repeat(hi, 3, ["fred"]));
+
+import {repeatDemo} from "./spicy/spicy_9.js";
+
+repeatDemo();
