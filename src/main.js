@@ -88,6 +88,11 @@
 // }
 
 import mpg_data from "./medium/data/mpg_data.js";
-import {searchHighPower} from "./medium/medium_3.js";
 
-console.log(searchHighPower(mpg_data, 630, 738));
+// import {searchHighPower} from "./medium/medium_3.js";
+
+// console.log(searchHighPower(mpg_data, 630, 738));
+
+import {searchName} from "./medium/medium_3.js";
+
+console.log(searchName(mpg_data, "amg"));

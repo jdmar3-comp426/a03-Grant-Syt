@@ -64,7 +64,18 @@ export function searchMpg(car_data, minCity, minHighway) {
  * @returns {[]} array of cars
  */
 export function searchName(car_data, searchTerm) {
-
+    var car_arr = [];
+    // select cars
+    for (var car of car_data) {
+        var str_idx = car.id.toUpperCase().indexOf(searchTerm.toUpperCase());
+        if (str_idx != -1) {
+            car.subStringIdx = str_idx;
+            car_arr.push(car);
+        }
+    }
+    // sort cars
+    return car_arr.sort((a,b) => a.subStringIdx - b.subStringIdx);
+    // remove index property?
 }
 
 
