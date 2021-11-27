@@ -74,8 +74,12 @@ export function searchName(car_data, searchTerm) {
         }
     }
     // sort cars
-    return car_arr.sort((a,b) => a.subStringIdx - b.subStringIdx);
-    // remove index property?
+    car_arr.sort((a,b) => a.subStringIdx - b.subStringIdx);
+    // remove index property
+    for (var car of car_arr) {
+        delete car.subStringIdx;
+    }
+    return car_arr;
 }
 
 
