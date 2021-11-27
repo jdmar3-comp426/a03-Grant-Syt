@@ -107,4 +107,4 @@ function hi(str) {
     return `hi ${str}`;
 }
 
-console.log(repeat(hi, 3, ["bill", "tom", "fred"]));
+console.log(repeat(hi, 3, ["fred"]));
