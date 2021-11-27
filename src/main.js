@@ -100,3 +100,11 @@
 // import {searchByYear} from "./medium/medium_3.js";
 
 // console.log(searchByYear(mpg_data, [2008, 2009]));
+
+import {repeat} from "./spicy/spicy_9.js";
+
+function hi(str) {
+    return `hi ${str}`;
+}
+
+console.log(repeat(hi, 3, ["bill", "tom", "fred"]));
