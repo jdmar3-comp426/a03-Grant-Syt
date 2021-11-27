@@ -113,6 +113,14 @@
 
 // repeatDemo();
 
-import {multiplyBy} from "./spicy/spicy_9.js";
+// import {multiplyBy} from "./spicy/spicy_9.js";
 
-console.log(multiplyBy(3)(5));
+// console.log(multiplyBy(3)(5));
+
+// import {tenTimes} from "./spicy/spicy_9.js";
+
+// console.log(tenTimes(5));
+
+import {tenTimesFifty} from "./spicy/spicy_9.js";
+
+console.log(tenTimesFifty());
