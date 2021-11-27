@@ -76,13 +76,18 @@
 
 // console.log(allCarStats);
 
-import {moreStats} from "./medium/medium_2.js";
+// import {moreStats} from "./medium/medium_2.js";
 
-console.log(moreStats);
-// for (var entry of moreStats.makerHybrids) {
-//     console.log(entry.hybrids);
+// console.log(moreStats);
+// // for (var entry of moreStats.makerHybrids) {
+// //     console.log(entry.hybrids);
+// // }
+// for (var year in moreStats.avgMpgByYearAndHybrid) {
+//     console.log(year);
+//     console.log(moreStats.avgMpgByYearAndHybrid[year]);
 // }
-for (var year in moreStats.avgMpgByYearAndHybrid) {
-    console.log(year);
-    console.log(moreStats.avgMpgByYearAndHybrid[year]);
-}
+
+import mpg_data from "./medium/data/mpg_data.js";
+import {searchHighPower} from "./medium/medium_3.js";
+
+console.log(searchHighPower(mpg_data, 630, 738));
