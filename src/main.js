@@ -121,6 +121,11 @@
 
 // console.log(tenTimes(5));
 
-import {tenTimesFifty} from "./spicy/spicy_9.js";
+// import {tenTimesFifty} from "./spicy/spicy_9.js";
 
-console.log(tenTimesFifty());
+// console.log(tenTimesFifty());
+
+import {everyEven} from "./spicy/spicy_9.js";
+
+console.log(everyEven([1, 5, 1, 0, 1], x => x === 1))  // <--  returns true
+console.log(everyEven([1, 1, 0, 1, 1], x => x === 1))  // <--  returns false
