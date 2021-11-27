@@ -109,6 +109,10 @@
 
 // console.log(repeat(hi, 3, ["fred"]));
 
-import {repeatDemo} from "./spicy/spicy_9.js";
+// import {repeatDemo} from "./spicy/spicy_9.js";
 
-repeatDemo();
+// repeatDemo();
+
+import {multiplyBy} from "./spicy/spicy_9.js";
+
+console.log(multiplyBy(3)(5));
