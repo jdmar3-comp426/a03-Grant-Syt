@@ -87,7 +87,7 @@
 //     console.log(moreStats.avgMpgByYearAndHybrid[year]);
 // }
 
-import mpg_data from "./medium/data/mpg_data.js";
+// import mpg_data from "./medium/data/mpg_data.js";
 
 // import {searchHighPower} from "./medium/medium_3.js";
 
@@ -97,6 +97,6 @@ import mpg_data from "./medium/data/mpg_data.js";
 
 // console.log(searchName(mpg_data, "amg"));
 
-import {searchByYear} from "./medium/medium_3.js";
+// import {searchByYear} from "./medium/medium_3.js";
 
-console.log(searchByYear(mpg_data, [2008, 2009]));
+// console.log(searchByYear(mpg_data, [2008, 2009]));
